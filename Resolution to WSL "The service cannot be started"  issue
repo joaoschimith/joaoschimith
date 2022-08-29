@@ -1,0 +1,17 @@
+Hi, I am João, from Brazil
+
+And today I am gonna do a simple teach about a issue problem can that happen in your WSL2 on Windows 11
+
+What's happenned with me, was when I tried run the WSL2 and the program showed the follow message:
+
+PS C:\WINDOWS\system32> wsl
+The service cannot be started, either because it is disabled or because it has no enabled devices associated with it.
+
+I solve this with my searches and I found the follow solution and conclusion
+This happen for because of the antivirus, generally the Kaspersky, that blocks linux apps for security questions
+
+To desative this, just enough type the follow code in your PowerShell:
+
+sc config LxssManager start=auto
+
+This should resolve the problem
